@@ -359,6 +359,7 @@ neverallow {
     -zygote
     userdebug_or_eng(`-mediaextractor')
     userdebug_or_eng(`-mediaswcodec')
+    -recovery
 } {
     file_type
     -system_file_type
@@ -433,6 +434,7 @@ neverallow {
 neverallow {
   domain
   -appdomain
+  -recovery
 } {
   data_file_type
   -apex_art_data_file

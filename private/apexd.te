@@ -198,7 +198,7 @@ neverallow { domain -apexd } apex_info_file:file no_w_file_perms;
 # but starting from S it just calls into apexd to prepare /apex for otapreoprt. Once the sepolicies
 # around otapreopt_chroot are cleaned up we should be able to remove it from the lists below.
 neverallow { domain -apexd -init -otapreopt_chroot } apex_mnt_dir:filesystem { mount unmount };
-neverallow { domain -apexd -init -otapreopt_chroot } apex_mnt_dir:dir { mounton };
+neverallow { domain -apexd -init -otapreopt_chroot -recovery } apex_mnt_dir:dir { mounton };
 
 # Allow for use in postinstall
 allow apexd otapreopt_chroot:fd use;
